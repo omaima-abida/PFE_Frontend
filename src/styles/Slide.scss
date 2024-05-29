@@ -1,0 +1,96 @@
+.slide {
+  width: 100vw;
+  height: 80vh;
+  background: linear-gradient(rgba(235, 232, 232, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../public/assets/slide.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.slide h1 {
+  font-size: 60px;
+  color: #4c16e0;
+  background-image: linear-gradient(to right, #ff416c, #ff4b2b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin: 0; /* Supprimer la marge par défaut */
+}
+
+.slide h2 {
+  font-size: 50px;
+  color: #0e0d0d;
+  background-image: linear-gradient(to right, #100f0f, #ee0faf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin: 0; /* Supprimer la marge par défaut */
+}
+
+.slide h2 span {
+  font-weight: bold;
+  color: rgb(13, 13, 13);
+}
+
+.slide .form {
+  background-color: #ffffffb3;
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+  height: 999px; /* Largeur du formulaire */
+  margin-right: auto; /* Aligner à droite */
+  // margin-left: auto; /* Aligner à gauche */
+  text-align: left; /* Aligner le contenu à gauche */
+}
+
+.slide .form h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.slide .form p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.slide .form .inputContainer {
+  margin-bottom: 15px;
+}
+
+.slide .form .inputContainer span {
+  margin-right: 10px;
+}
+
+.slide .form input[type="text"],
+.slide .form input[type="date"],
+.slide .form select {
+  width: calc(100% - 20px); /* Réduire la largeur */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.slide .form button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #dd457f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.slide .form button:hover {
+  background-color: #5f3b08;
+}

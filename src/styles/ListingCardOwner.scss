@@ -1,0 +1,154 @@
+@import "./variables.scss";
+
+.listing-card {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+
+  &:hover {
+    @include shadow;
+  }
+
+  .slider-container {
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+
+      .slide {
+        position: relative;
+        flex: 0 0 100%;
+        width: 100%;
+        height: 270px;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          filter: brightness(85%);
+        }
+
+        .prev-button,
+        .next-button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 6px;
+          border-radius: 50%;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(255, 255, 255, 0.7);
+          z-index: 9999;
+
+          &:hover {
+            background-color: white;
+          }
+        }
+
+        .prev-button {
+          left: 10px;
+        }
+
+        .next-button {
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  span {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .favorite {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 999;
+    background: none;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 0.42rem;
+    padding: 0.625rem 1.25rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Icon button styles */
+.btn-icon {
+    padding: 0.625rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    line-height: 1;
+    text-align: center;
+}
+
+/* Danger button styles (delete button) */
+.btn-danger {
+    color: #fff;
+    background-color: #f64e60;
+    border-color: #f64e60;
+}
+
+.btn-danger:hover {
+    background-color: #e53935;
+    border-color: #e53935;
+}
+
+.btn-danger:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(230, 72, 82, 0.5);
+}
+
+.btn-danger:active {
+    background-color: #d32f2f;
+    border-color: #c62828;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #3699ff;
+    border-color: #3699ff;
+}
+
+.btn-primary:hover {
+    background-color: #2e8ae6;
+    border-color: #2e8ae6;
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(54, 153, 255, 0.5);
+}
+
+.btn-primary:active {
+    background-color: #2679cc;
+    border-color: #2679cc;
+}
+
+}

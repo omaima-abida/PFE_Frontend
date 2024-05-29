@@ -1,0 +1,175 @@
+// Définition des variables de couleur
+$pinkred: #ff69b4;
+$blue: #4169e1;
+$black: #000000;
+$gray: #808080;
+
+// Définition du mixin lg pour les grands écrans
+@mixin lg {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+// Définition du mixin md pour les écrans moyens
+@mixin md {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+// Définition du mixin sm pour les petits écrans
+@mixin sm {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+// Style du pied de page
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 10px 70px;
+  background-color:antiquewhite;
+
+  // Appliquer le padding spécifique pour les grands écrans
+  @include lg {
+    padding: 10px 30px;
+  }
+
+  // Style de la partie gauche du pied de page
+  &_left {
+    max-width: 400px;
+
+    img {
+      max-width: 100px;
+      margin-bottom: 20px;
+    }
+
+    // Style du texte "created by"
+    &_created {
+      font-size: 18px;
+      color: $pinkred;
+      font-weight: bold;
+    }
+
+    // Style du texte "powered by" et du lien associé
+    &_powered {
+      font-size: 16px;
+      color: $blue;
+      a {
+        color: $blue;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $pinkred;
+        }
+      }
+    }
+
+    // Style des icônes de réseaux sociaux
+    &_socials {
+      display: flex;
+      gap: 25px;
+      margin-top: 20px;
+
+      &_icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $pinkred;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+
+        svg {
+          font-size: 20px;
+          color: rgb(232, 90, 90);
+        }
+      }
+    }
+
+    // Style du texte "created by" avec les détails Hajer&&Omaima@pfe2024
+    p {
+      font-size: 18px;
+      color: $black;
+      margin-top: 10px;
+      span {
+        font-weight: bold;
+        color: $pinkred;
+      }
+    }
+  }
+
+  // Style de la partie centrale du pied de page
+  &_center {
+    text-decoration: none;
+
+    h3 {
+      margin-bottom: 20px;
+      color: $pinkred;
+    }
+
+
+    ul {
+      list-style: none;
+      margin-top: 20px;
+      cursor: pointer;
+
+      
+      li {
+        // color: $pinkred;
+        margin-bottom: 20px; 
+      }
+
+
+      li:hover {
+        color: $pinkred;
+        margin-bottom: 10px; 
+      }
+
+      a {
+        text-decoration: none;
+        color: $black;
+
+        &:hover {
+          color: $pinkred;
+        }
+      }
+    }
+
+    // Cacher la partie centrale pour les écrans moyens et petits
+    @include md {
+      display: none;
+    }
+  }
+
+  // Style de la partie droite du pied de page
+  &_right {
+    max-width: 350px;
+
+    h3 {
+      margin-bottom: 20px;
+      color: $pinkred;
+    }
+
+    p {
+      font-size: 14px;
+      color: $gray;
+    }
+
+    // Cacher la partie droite pour les petits écrans
+    @include sm {
+      display: none;
+    }
+  }
+}
